@@ -106,7 +106,7 @@
                                 <!-- an error submitting the form-->
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                                 <!-- Submit Button-->
-                                <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit">Send</button>
+                                <button class="btn btn-primary text-uppercase disabled" id="submitButton" onclick="save()" type="submit">Send</button>
                             </form>
                         </div>
                     </div>
@@ -158,5 +158,22 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
     </body>
+
+    <script>
+            function save() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+
+        alert("success")
+
+        var n = localStorage.setItem("name",name);
+        var mail = localStorage.setItem("email",email);
+        var p = localStorage.setItem("phone",phone);
+        var mes = localStorage.setItem("message",message);
+    }
+    </script>
 </html>
